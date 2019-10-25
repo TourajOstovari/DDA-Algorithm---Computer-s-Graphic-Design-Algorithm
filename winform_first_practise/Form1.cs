@@ -12,22 +12,27 @@ namespace winform_first_practise
 {
     public partial class Form1 : Form
     {
+        static int y2 = 60; // x2
+        static float y1 = 30.0f; // x1
+        //==============
+        static int x2 = 80; // y2
+        static float x1 = 50; // y1
         public Form1()
         {
             InitializeComponent();
             //this.Paint += 
+            
         }
-
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            try
+            {
+
+
             Graphics graphics = e.Graphics;
             Pen pen = new Pen(System.Drawing.Color.Black, 5.0f);
 
-            int y2 = 20; // x2
-            float y1 = 30.0f; // x1
-            //==============
-            int x2 = 180; // y2
-            float x1 = 50; // y1
+
             //==============
             float rep_x1 = x1;
             float rep_y1 = y1;
@@ -78,6 +83,10 @@ namespace winform_first_practise
                 graphics.DrawLine(pen, x1, y1, x2, y2);
             }
             graphics.Dispose();
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -87,7 +96,18 @@ namespace winform_first_practise
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                x1 = int.Parse(Source_X.Text);
+                y1 = int.Parse(Source_Y.Text);
+                x2 = int.Parse(Dest_X.Text);
+                y2 = int.Parse(Dest_Y.Text);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Error Code: " + exc.HResult + "\t" + exc.Message + "\n");
+            }
+            Form1.ActiveForm.Invalidate();
         }
-    }
+}
 }

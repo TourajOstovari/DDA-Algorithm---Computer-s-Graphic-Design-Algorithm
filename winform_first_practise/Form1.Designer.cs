@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -137,11 +138,23 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
+            this.label7.Location = new System.Drawing.Point(418, 169);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(242, 24);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Values More than 100 Is Not Recommended ...";
+            this.label7.UseCompatibleTextRendering = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -174,6 +187,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label7;
     }
 }
 
